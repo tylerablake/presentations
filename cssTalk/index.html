@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to CSS</title>
+
+		<meta name="description" content="An Introduction to CSS">
+		<meta name="author" content="Tyler Blake">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/f12.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<script src="lib/js/jquery-1.11.0.min.js"></script>
+		<script src="lib/js/awesome-library.js"></script>
+		<script src="lib/js/third-party-library.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			img.screenshot1024 {
+				width: 75%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" >
+				<section>
+					<h1>Intro to CSS</h1>
+					<h3>An Introduction to Web Development Styling</h3>
+					<p>
+						<small>Created by <a href="http://tylerablake.com" target="_blank">Tyler Blake</a> / <a href="http://twitter.com/TylerBlakeLOU">@TylerBlakeLOU</a></small>
+					</p>
+				</section>
+
+<!-- 				<section>
+					<section>
+						<h2>Unimportant About Me Section</h2>
+					</section>
+
+					<section>
+						<img src="images/About%20Me/uofl.gif">
+					</section>
+
+					<section>
+						<img src="images/About%20Me/kizan.jpeg">
+					</section>
+				</section> -->
+
+
+				<section>
+					<h2>Agenda</h2>
+					<ul id="aboutMeList">
+						<li class="fragment">What is CSS?</li>
+						<li class="fragment">Why use it?</li>
+						<li class="fragment">Syntax</li>
+						<li class="fragment">Methods of Styling</li>
+						<li class="fragment">Targeting Elements</li>
+						<li class="fragment">Basic Code Samples</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>What is CSS?</h1>
+					</section>
+
+					<section>
+						<ul>
+							<li>Cascading Style Sheets</li>
+							<li class="fragment">Set of rules to edit styling of elements</li>
+						</ul>
+					</section>
+				</section>
+
+            	<!-- Disable Caching -->
+                <section>
+                	<section>
+						<h1>Why use it?</h1>
+                	</section>
+
+					<section>
+                        <ul>
+                            <li>Separation of content from markup</li>
+                            <li class="fragment">Cleaner code</li>
+                            <li class="fragment">Easier to maintain</li>
+                        </ul>
+					</section>
+                </section>
+
+                <section>
+                	<section>
+						<h1>Syntax</h1>
+                	</section>
+
+					<section>
+						<h2>Rule Syntax</h2>
+						<img src="images/CSS/cssRuleSyntax.png">
+					</section>
+
+					<section>
+						<h2>Grouping Rules</h2>
+						<img src="images/CSS/groupingSyntax.png">
+					</section>
+                </section>
+
+				<section>
+					<section>
+						<h1>Methods of Styling</h1>
+					</section>
+					<section>
+						<h2>Inline</h2>
+						<img src="images/CSS/inlineStylingExample.png" class="screenshot1024">
+					</section>
+
+					<section>
+						<h2>Embedded</h2>
+						<img src="images/CSS/embeddedStylingExample.png" class="screenshot1024">
+					</section>
+
+					<section>
+						<h2>Linked</h2>
+                        <img src="images/CSS/linkedStylingExample.png" class="screenshot1024">
+					</section>
+
+					<section>
+						<h2>Order of Priority</h2>
+						<ol>
+							<li>Inline</li>
+							<li>Embedded</li>
+							<li>Linked</li>
+						</ol>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h1>Targeting Elements</h1>
+					</section>
+					<section>
+						<h2>ID's</h2>
+						<ul>
+							<li class="fragment">Elements can be given ID's</li>
+							<li class="fragment">ID's are referenced by a # sign</li>
+						</ul>
+						<img src="images/CSS/idStylingExample.png" class="screenshot1024 fragment">
+					</section>
+
+					<section>
+						<h2>Classes</h2>
+						<ul>
+							<li class="fragment">Elements can also be given classes</li>
+							<li class="fragment">Classes are referenced by a .</li>
+						</ul>
+						<img src="images/CSS/classStylingExample.png" class="screenshot1024 fragment">
+					</section>
+
+					<section>
+						<h2>Can references overlap?</h2>
+						<ul>
+							<li class="fragment"><b>Cascading</b> Style Sheets</li>
+							<li class="fragment">Styles overlap or cascade</li>
+						</ul>
+						<img src="images/CSS/cascadingExample.png" class="screenshot1024 fragment">
+					</section>
+
+					<section>
+						<h2>Nesting Selectors</h2>
+                        <img src="images/CSS/nestedSelectorExample.png" class="screenshot1024 fragment">
+					</section>
+				</section>
+
+                <section>
+                    <section>
+                        <h1>Value Types</h1>
+                    </section>
+
+                    <section>
+                        <h2>Word Values</h2>
+                        <img src="images/CSS/wordValues.png" class="screenshot1024 fragment">
+                        <p class="fragment">Note: Absolute values are bad!</p>
+                    </section>
+
+                    <section>
+                        <h2>Numeric Values</h2>
+                        <img src="images/CSS/numericValues.png" class="screenshot1024 fragment">
+                        <p class="fragment">Note: Relative values are good!!</p>
+                    </section>
+
+                    <section>
+                        <h2>Color Values</h2>
+                        <ul>
+                        	<li class="fragment">Can be word or hexadecimal</li>
+                        	<li class="fragment">#RRGGBB or #RGB</li>
+                        </ul>
+                        <img src="images/CSS/colorValues1.png" class="screenshot1024 fragment">
+                    </section>
+
+                    <section>
+                        <h2>Hexadecimal System</h2>
+                        <img src="images/CSS/hexColors.png" class="screenshot1024 fragment">
+                    </section>
+                </section>
+
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'linear',
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
