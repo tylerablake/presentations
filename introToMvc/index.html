@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to .NET MVC</title>
+
+		<meta name="description" content="An Introduction to .NET MVC">
+		<meta name="author" content="Tyler Blake">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/f12.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<script src="lib/js/jquery-1.11.0.min.js"></script>
+		<script src="lib/js/awesome-library.js"></script>
+		<script src="lib/js/third-party-library.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			img.screenshot1024 {
+				width: 75%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" >
+				<section>
+					<h1>Intro to .NET MVC</h1>
+					<p>
+						<small>Created by <a href="http://tylerablake.com" target="_blank">Tyler Blake</a> / <a href="http://twitter.com/TylerBlakeLOU">@TylerBlakeLOU</a></small>
+					</p>
+				</section>
+<!-- 				<section>
+					<section>
+						<h2>Unimportant About Me Section</h2>
+					</section>
+
+					<section>
+						<img src="images/About%20Me/uofl.gif">
+					</section>
+
+					<section>
+						<img src="images/About%20Me/kizan.jpeg">
+					</section>
+				</section> -->
+
+				<section>
+					<h2>Agenda</h2>
+					<ul id="aboutMeList">
+						<li class="fragment">What is .NET?</li>
+						<li class="fragment">What is MVC?</li>
+<!-- 						<li class="fragment">Elements & Tags</li>
+						<li class="fragment">How to Start</li>
+						<li class="fragment">Basic Code Samples</li>
+ -->					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1>What is .NET?</h1>
+					</section>
+
+					<section>
+						<ul>
+							<li>A Framework designed by Microsoft</li>
+							<li class="fragment">What is a framework?</li>
+							<li class="fragment">It is an abstraction in which common code providing generic functionality can be selectively overridden</li>
+							<li class="fragment">An example of this functionality would be CRUD functionality</li>
+							<li class="fragment">Is NOT a programming language</li>
+						</ul>
+					</section>
+				</section>
+
+            	<!-- Disable Caching -->
+                <section>
+                	<section>
+						<h1>What is MVC?</h1>
+                	</section>
+            		<section>
+            			<ul>
+            				<li>MVC is an architectural pattern in software development</li>
+            					<li class="fragment">It stands for <b>M</b>odel, <b>V</b>iew, <b>C</b>ontroller</li>
+            					<li class="fragment">Is NOT specific to Microsoft or .NET</li>
+            				<img src="images/badMVCDiagram.jpg" class="fragment">
+            				<li class="fragment">This is a <b>bad</b> MVC Workflow diagram</li>
+            			</ul>
+            		</section>
+            		<section>
+            			<li>This is a better diagram but could be improved</li>
+            			<img src="images/betterMVCDiagram.png" class="fragment">
+            		</section>
+
+					<section>
+						<h2>Model</h2>
+                        <ul>
+                        	<li>This refers to your data models</li>
+                        	<li class="fragment">Example</li>
+                        </ul>
+					</section>
+					<section>
+						<h2>View</h2>
+                        <ul>
+                            <li>This would be the parts that you and the users see</li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Controller</h2>
+                        <ul>
+                            <li>This is where your routing logic will go</li>
+                            <li class="fragment">This is how you will control what views(pages) the user gets redirected to and/or sees</li>
+                        </ul>
+					</section>
+					<section>
+						<h2>Service/Data Access Layer</h2>
+                        <ul>
+                            <li>This is where your business logic will go</li>
+                            <li class="fragment">This is where you would push or pull data into your database perhaps</li>
+                            <li class="fragment"><small>Note: You could provide another layer of abstraction after the service for data access to the database.. some say that is best practice.</small></li>
+                        </ul>
+					</section>
+
+					<section>
+						<li>This is a better representation of "best practice", I think</li>
+						<img src="images/bestMVCDiagram.png" class="fragment">
+						<li class="fragment"><small>Note: I think there should be a "Controllers" layer between Presentation and Services</small></li>
+					</section>
+                </section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'linear',
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
